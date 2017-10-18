@@ -1,0 +1,7 @@
+[template]
+src = "onegate-server.conf.tmpl"
+dest = "/etc/one/onegate-server.conf"
+owner = "root"
+mode = "0644"
+keys = [
+]

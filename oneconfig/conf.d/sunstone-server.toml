@@ -1,0 +1,8 @@
+[template]
+src = "sunstone-server.conf.tmpl"
+dest = "/etc/one/sunstone-server.conf"
+owner = "root"
+mode = "0644"
+keys = [
+  "/self/service/metadata/sunstone/listen_address",
+]

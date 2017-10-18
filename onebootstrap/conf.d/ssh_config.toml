@@ -1,0 +1,8 @@
+[template]
+src = "ssh_config.tmpl"
+dest = "/var/lib/one/.ssh/config"
+owner = "9869"
+group = "9869"
+mode = "0600"
+keys = [
+]

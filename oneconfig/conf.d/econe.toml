@@ -1,0 +1,8 @@
+[template]
+src = "econe.conf.tmpl"
+dest = "/etc/one/econe.conf"
+owner = "root"
+mode = "0644"
+keys = [
+  "/self/service/metadata/econe/fqdn",
+]

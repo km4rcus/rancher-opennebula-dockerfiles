@@ -1,0 +1,11 @@
+[template]
+src = "oned.conf.tmpl"
+dest = "/etc/one/oned.conf"
+owner = "root"
+group = "root"
+mode = "0644"
+keys = [
+  "/services/mysql/metadata/one_db/name",
+  "/services/mysql/metadata/one_db/username",
+  "/services/mysql/metadata/one_db/password",
+]

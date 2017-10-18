@@ -1,0 +1,79 @@
+version: '2'
+
+services:
+  onebase:
+    build:
+      context: ./onebase/%%OS%%
+      args:
+        ONE_VERS: 5.4
+    image: %%REPO%%/onebase:%%TAG%%
+
+  oneconfig:
+    build:
+      context: ./oneconfig
+      args:
+        REPO: %%REPO%%
+        TAG: %%TAG%%
+    image: %%REPO%%/oneconfig:%%TAG%%
+    depends_on:
+      - onebase
+
+  onebootstrap:
+    build:
+      context: ./onebootstrap
+      args:
+        REPO: %%REPO%%
+        TAG: %%TAG%%
+    image: %%REPO%%/onebootstrap:%%TAG%%
+    depends_on:
+      - onebase
+
+  oned:
+    build:
+      context: ./oned
+      args:
+        REPO: %%REPO%%
+        TAG: %%TAG%%
+    image: %%REPO%%/oned:%%TAG%%
+    depends_on:
+      - onebase
+
+  sunstone:
+    build:
+      context: ./sunstone
+      args:
+        REPO: %%REPO%%
+        TAG: %%TAG%%
+    image: %%REPO%%/sunstone:%%TAG%%
+    depends_on:
+      - onebase
+
+  econe:
+    build:
+      context: ./econe
+      args:
+        REPO: %%REPO%%
+        TAG: %%TAG%%
+    image: %%REPO%%/econe:%%TAG%%
+    depends_on:
+      - onebase
+
+  oneflow:
+    build:
+      context: ./oneflow
+      args:
+        REPO: %%REPO%%
+        TAG: %%TAG%%
+    image: %%REPO%%/oneflow:%%TAG%%
+    depends_on:
+      - onebase
+
+  onegate:
+    build:
+      context: ./onegate
+      args:
+        REPO: %%REPO%%
+        TAG: %%TAG%%
+    image: %%REPO%%/onegate:%%TAG%%
+    depends_on:
+      - onebase

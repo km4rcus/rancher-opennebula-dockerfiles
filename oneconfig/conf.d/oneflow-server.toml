@@ -1,0 +1,7 @@
+[template]
+src = "oneflow-server.conf.tmpl"
+dest = "/etc/one/oneflow-server.conf"
+owner = "root"
+mode = "0644"
+keys = [
+]

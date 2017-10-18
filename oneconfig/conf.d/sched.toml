@@ -1,0 +1,7 @@
+[template]
+src = "sched.conf.tmpl"
+dest = "/etc/one/sched.conf"
+owner = "root"
+mode = "0644"
+keys = [
+]
