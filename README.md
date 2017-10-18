@@ -1,6 +1,6 @@
 # ** WORK IN PROGRESS **
 
-Dockerfiles to build images for deploying **OpenNebula Frontend** components as a **Rancher Stack** ( [link OpenNebula Catalog!](http://github.com/km4rcus/opennebula-catalog))
+Dockerfiles to build images for deploying **OpenNebula Frontend** components as a **Rancher Stack** ( [link OpenNebula Catalog](https://github.com/km4rcus/rancher-opennebula-catalog))
 
 Change specific values of %%REPO%%/%%TAG%% and %%OS%% in `render_template.sh` *(debian and centos Dockerfiles will be added soon)*
 
