@@ -4,12 +4,12 @@ FROM ${OS}:${OS_VERS}
 MAINTAINER Marco Mancini (marcomancini72@gmail.com)
 LABEL Description="OpenNebula Base Image 5.4 - Ubuntu 16.04 based" Version="0.1"
 
-ARG ONE_VERS=5.4
+ARG ONE_VERSION=5.4
 ARG ONE_REPO_OS=Ubuntu
 ARG OS_VERS=16.04
 RUN apt-get update && apt-get install -y wget apt-transport-https
 RUN wget -q -O- http://downloads.opennebula.org/repo/repo.key | apt-key add -
-RUN echo "deb https://downloads.opennebula.org/repo/${ONE_VERS}/${ONE_REPO_OS}/${OS_VERS} stable opennebula" > /etc/apt/sources.list.d/opennebula.list
+RUN echo "deb https://downloads.opennebula.org/repo/${ONE_VERSION}/${ONE_REPO_OS}/${OS_VERS} stable opennebula" > /etc/apt/sources.list.d/opennebula.list
 
 RUN apt-get update && apt-get install -y vim opennebula opennebula-sunstone opennebula-flow opennebula-gate
 

@@ -5,7 +5,7 @@ services:
     build:
       context: ./onebase/%%OS%%
       args:
-        ONE_VERS: 5.4
+        ONE_VERSION: %%ONE_VERSION%%
     image: %%REPO%%/onebase:%%TAG%%
 
   oneconfig:
