@@ -1,6 +1,7 @@
 #!/bin/bash
 #
-# waiting for the bootstrap and then start
+# wait for the bootstrap to create the config files and to init the db
+#
 while [ ! -f /var/lib/one/.one_bootstrapped ]
 do
     sleep 10;
